@@ -1,9 +1,20 @@
 ## Installation
 ### Dependencies
-Cayley-RPMDrate depends on several other packages in order to provide its full functional capabilities. The following dependencies are required to compile and run RPMD:
+Cayley-RPMDrate depends on several other packages in order to provide its full 
+
+
+functional capabilities. The following dependencies are required to compile and run RPMD:
+
+
 Python: any version of Python3 is recommended
+
+
 Numpy: version 1.5.0 or later is recommended
+
+
 A standard Fortran 90/95 compiler
+
+
 ### Compiling from Source
 Change the compiler and python choices in the Makefile and run `make` to compile RPMD.
 ### Generate PES file
