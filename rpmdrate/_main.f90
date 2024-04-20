@@ -733,6 +733,7 @@ contains
             end do
 
             call get_reaction_coordinate(qctemp, Natoms, xi_current, xi_new, dxi_new, d2xi_new)
+            ! write(*,*)xi_new
 
             sigma = xi_new
             dsigma = 0.0d0

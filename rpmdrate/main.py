@@ -1027,7 +1027,6 @@ class RPMD:
             
             # Seed the random number generator
             self.initializeRandomNumberGenerator()
-
             # Generate initial position using transition state geometry
             # (All beads start at same position)
             q0 = numpy.zeros((3,self.Natoms,self.Nbeads), order='F')
@@ -1040,6 +1039,7 @@ class RPMD:
             # and sampling from Andersen thermostat
             logging.info('Equilibrating parent trajectory for {0:g} ps...'.format(equilibrationSteps * self.dt * constants.au2ps))
             result = 1
+            # print(xi_current)
             while result != 0:
                 q = numpy.asfortranarray(q0.copy())
                 p = self.sampleMomentum()            
