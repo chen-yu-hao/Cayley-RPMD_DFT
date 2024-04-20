@@ -1,9 +1,6 @@
 ## Installation
 ### Dependencies
-Cayley-RPMDrate depends on several other packages in order to provide its full 
-
-
-functional capabilities. The following dependencies are required to compile and run RPMD:
+Cayley-RPMDrate depends on several other packages in order to provide its full functional capabilities. The following dependencies are required to compile and run RPMD:
 
 
 Python: any version of Python3 is recommended
