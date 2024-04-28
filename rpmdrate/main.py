@@ -1037,13 +1037,23 @@ class RPMD:
             
             # Equilibrate parent trajectory while constraining to dividing surface
             # and sampling from Andersen thermostat
+
+            #################load equilibrated position from checkpoint, Yuhao Chen###############################
+            try:
+                q0=numpy.load(os.path.join(os.path.join(workingDirectory, 'recrossing.npy')))
+            except:
+                pass
+            #####################################################################################################
+            
             logging.info('Equilibrating parent trajectory for {0:g} ps...'.format(equilibrationSteps * self.dt * constants.au2ps))
             result = 1
             # print(xi_current)
             while result != 0:
                 q = numpy.asfortranarray(q0.copy())
                 p = self.sampleMomentum()            
-                result = system.equilibrate(0, p, q, equilibrationSteps, self.xi_current, self.potential, 0.0, True, False)
+                result = system.equilibrate(0, p, q, equilibrationSteps, self.xi_current, self.potential, 0.0, True, False)            
+            numpy.save(os.path.join(workingDirectory, 'recrossing.npy'), q)
+
             
             logging.info('Finished equilibrating parent trajectory.')
             logging.info('')
@@ -1094,10 +1104,12 @@ class RPMD:
                 # surface and sampling from Andersen thermostat
                 logging.info('Evolving parent trajectory to {0:g} ps...'.format((parentIter+1) * childSamplingSteps * self.dt * constants.au2ps))
                 result = system.equilibrate(0, p, q, childSamplingSteps, self.xi_current, self.potential, 0.0, True, False)
+                
                 while result != 0:
                     q = numpy.asfortranarray(q0.copy())
                     p = self.sampleMomentum()            
                     result = system.equilibrate(0, p, q, equilibrationSteps, self.xi_current, self.potential, 0.0, True, saveParentTrajectory)
+                numpy.save(os.path.join(workingDirectory, 'recrossing.npy'), q)
                 
                 parentIter += 1
             
