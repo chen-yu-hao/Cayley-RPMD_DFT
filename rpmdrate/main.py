@@ -108,6 +108,24 @@ def runRecrossingTrajectory(rpmd, xi_current, p, q, evolutionSteps, saveTrajecto
     
     return kappa_num1 + kappa_num2, kappa_denom1 + kappa_denom2
 
+def runABF(rpmd, p, q, equilibrationSteps):
+    """
+    Run an individual umbrella integration trajectory, returning the sum of the
+    first and second moments of the reaction coordinate at each time step.
+    """
+    system.initialize_mlabf()
+    rpmd.activate()
+    steps = 0
+    # p=numpy.load("p.npy")
+    # q=numpy.load("q.npy")
+    # print(saveTrajectory)
+    xi_list=numpy.zeros(equilibrationSteps)
+    p1 = numpy.asfortranarray(p.copy())
+    q1 = numpy.asfortranarray(q.copy())
+    xi_list1 = numpy.asfortranarray(xi_list.copy())
+    system.equilibrate_abf(0, p1, q1,xi_list1, rpmd.potential)
+    
+    return xi_list1, p1, q1
 ################################################################################
 
 class Window:
@@ -1738,7 +1756,7 @@ class RPMD:
             random_init_seed(self.randomSeed)
         else:
             random_init()
-    def ABF_fit(self):
+    def ABF_fit_init(self):
         import os
         import numpy as np
         import tensorflow as tf
@@ -1758,6 +1776,7 @@ class RPMD:
         from sklearn.utils import shuffle
         from sklearn.preprocessing import RobustScaler
         PMF_data=PMF_data[:]
+        np.savetxt("scale",[PMF_data[:,0].max(),PMF_data[:,0].min(),PMF_data[:,1].max(),PMF_data[:,1].min()])
         #data:需要进行分割的数据集
         #random_state:设置随机种子，保证每次运行生成相同的随机数
         #test_size:将数据分割成训练集的比例
@@ -1767,18 +1786,24 @@ class RPMD:
         X_train,X_valid=X[:int(X.shape[0]*0.8)],X[int(X.shape[0]*0.9):]
         Y_train,Y_valid=Y[:int(Y.shape[0]*0.8)],Y[int(Y.shape[0]*0.9):]
         model0 = tf.keras.models.Sequential([
-                tf.keras.layers.Dense(32, activation='tanh',input_shape=(1,)),
-                tf.keras.layers.Dense(32, activation='tanh'),
+                tf.keras.layers.Dense(16, activation='tanh',input_shape=(1,)),
+                tf.keras.layers.Dense(8, activation='tanh'),
                 # tf.keras.layers.Dense(10),
                 tf.keras.layers.Dense(1)
         ])
         lr=1
+        # try:
+        #     model0.load_weights("model_check")
+        # except:
+        #     pass
         model_wrapper0 = lm.ModelWrapper(model0)
         model_wrapper0.compile(
             optimizer=tf.keras.optimizers.SGD(learning_rate=lr),
             loss=lm.MeanSquaredError(),
             damping_algorithm=lm.DampingAlgorithm(
                 adaptive_scaling=True,
+                # max_value=1e1,
+                # starting_value=1e-7
                 # fletcher=True
             ),
             solve_method="solve",
@@ -1787,8 +1812,119 @@ class RPMD:
                 tf.keras.metrics.MeanSquaredError()
             ]
         )
-        model_wrapper0.fit(X_train, Y_train, epochs=1000,batch_size=5000,validation_data=(X_valid,Y_valid))
-        model_wrapper0.save("model0.keras")
-    def ABF(self):
-        self.ABF_fit()
+        model_wrapper0.fit(X_train, Y_train, epochs=30,batch_size=10000,validation_data=(X_valid,Y_valid))
+        model0.save_weights("model_check")
+        for i in range(3):
+            numpy.savetxt(f"weights_{i}",np.array(model0.weights[i*2]).T.reshape(-1,1))
+            numpy.savetxt(f"biases_{i}",model0.weights[i*2+1])
+
+
+    def ABF_fit():
+        pass
+
+    def ABF(self,dt,evolutionTime):
+        import matplotlib.pyplot as plt
+        # self.ABF_fit_init()
+        
+
+        dt = float(quantity.convertTime(dt, "ps")) / constants.au2ps
+        self.dt = dt
+        evolutionTime = float(quantity.convertTime(evolutionTime, "ps")) / constants.au2ps
+        equilibrationSteps = int(evolutionTime/dt)
+        workingDirectory = self.createWorkingDirectory()
+
+        xilist=[]
+        qlist=[]
+        results=[]
+        plotlist=[]
+        # system.equilibrate_abf(0.0,p,q,xi_list1,self.potential)
+        # print(runABF(self,p,q,100000))
+        processes = self.processes
+        try:
+            import multiprocessing
+            if processes > 1:
+                pool = multiprocessing.Pool(processes=processes)
+            else:
+                pool = None
+        except ImportError:
+            if processes > 1:
+                raise ValueError('The "multiprocessing" package was not found in this Python installation; you must install this package or set processes to 1.')
+            pool = None
+        window_xilist=numpy.arange(0.0, 1.0, 0.01)
+        for child in window_xilist:
+            q_child = numpy.load(os.path.join(os.path.join(workingDirectory, 'umbrella_sampling_{0:.8f}_q.npy'.format(child))))
+            p_child = self.sampleMomentum()
+            # print(saveChildTrajectory)
+            args = (self, p_child, q_child,1000)
+            if pool:
+                results.append(pool.apply_async(runABF, args))
+            else:
+                results.append(runABF(*args))           
+            # childCount += 2
+            # cor+=1
+        for i in range(len(window_xilist)):
+            # This line will block until the child trajectory finishes
+            if pool:
+                xi_list1, p1, q1= results[i].get()
+            else:
+                xi_list1, p1, q1 = results[i]
+            # Update the numerator and denominator of the recrossing factor expression
+            # xilist.append(xi_list1)
+            qlist.append(q1)
+        for j in range(3):
+            results=[]
+            xilist=[]
+            for a in range(10):
+                for child in qlist:
+                    q_child = child
+                    p_child = self.sampleMomentum()
+                    # print(saveChildTrajectory)
+                    args = (self, p_child, q_child,500)
+                    if pool:
+                        results.append(pool.apply_async(runABF, args))
+                    else:
+                        results.append(runABF(*args))  
+                qlist=[]
+                for i in range(len(window_xilist)):
+                    # This line will block until the child trajectory finishes
+                    if pool:
+                        xi_list1, p1, q1= results[i].get()
+                    else:
+                        xi_list1, p1, q1 = results[i]
+                    # Update the numerator and denominator of the recrossing factor expression
+                    # xilist.append(xi_list1)
+                    qlist.append(q1) 
+                for child in qlist:
+                    q_child = child
+                    p_child = self.sampleMomentum()
+                    # print(saveChildTrajectory)
+                    args = (self, p_child, q_child,100000)
+                    if pool:
+                        results.append(pool.apply_async(runABF, args))
+                    else:
+                        results.append(runABF(*args))  
+                qlist=[]
+                for i in range(len(window_xilist)):
+                    # This line will block until the child trajectory finishes
+                    if pool:
+                        xi_list1, p1, q1= results[i].get()
+                    else:
+                        xi_list1, p1, q1 = results[i]
+                    # Update the numerator and denominator of the recrossing factor expression
+                    xilist.append(xi_list1)
+                    qlist.append(q1) 
+
+            xilist=numpy.array(xilist).reshape(-1,1)
+            counts,bins,q =plt.hist(xilist,bins=500)
+            bins=(bins[:-1]+bins[1:])/2
+            plt.cla()
+            plotlist.append([bins,counts])
+        
+
+
+        
+
+        for bins,counts in plotlist:
+            plt.scatter(bins,counts/len(xilist),alpha=0.4)
+        plt.show()
 

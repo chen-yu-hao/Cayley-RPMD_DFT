@@ -26,6 +26,7 @@
 !
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
+
 module system
 
     implicit none
@@ -56,7 +57,349 @@ module system
 
     integer :: if_file_child !! For saving child trajectories.
 
+    integer,parameter :: N_in=1,N_hid_0=16,N_hid_1=8
+
+    double precision, dimension(N_in, N_hid_0) :: weights1
+    double precision, dimension(N_hid_0, N_hid_1) :: weights2
+    double precision, dimension(N_hid_1, 1) ::  weights3
+    double precision, dimension(1, N_hid_0) :: bias1
+    double precision, dimension(1, N_hid_1) :: bias2
+    double precision :: bias3
+    double precision :: xmax
+    double precision :: xmin
+    double precision :: ymax
+    double precision :: ymin
+
 contains
+    subroutine initialize_mlABF()
+        implicit none
+        integer :: i, j
+        open(unit=10, file="weights_0", status='old')
+    
+        do i=1,N_hid_0
+            do j=1,N_in
+                read(10, *) weights1(j,i)
+            end do
+        end do
+        close(unit=10)
+
+        open(unit=10, file="weights_1", status='old')
+        do i=1,N_hid_1
+            do j=1,N_hid_0
+                read(10, *) weights2(j,i)
+            end do
+        end do
+        close(unit=10)
+        open(unit=10, file="weights_2", status='old')
+        do j=1,N_hid_1
+            read(10, *) weights3(j,1)
+        end do
+    
+        close(unit=10)
+    
+        open(unit=10, file="biases_0", status='old')
+
+        do i=1,N_hid_0
+            read(10, *) bias1(1, i)
+        end do
+        close(unit=10)
+        open(unit=10, file="biases_1", status='old')
+        do i=1,N_hid_1
+            read(10, *) bias2(1,i)
+        end do
+        close(unit=10)
+        open(unit=10, file="biases_2", status='old')
+        read(10,*) bias3
+    
+        close(unit=10)
+        open(unit=10, file="scale", status='old')
+        read(10,*) xmax
+        read(10,*) xmin
+        read(10,*) ymax
+        read(10,*) ymin
+
+    end subroutine
+
+    subroutine ml_ABF_model(in, value3, length)
+        implicit none
+        integer, intent(in) :: length
+        double precision, dimension(length, 1) :: in
+        double precision, dimension(length, 1) :: in1
+        double precision, dimension(length, N_hid_0) :: value1
+        double precision, dimension(length, N_hid_1) :: value2
+        double precision, dimension(length, 1),intent(out) :: value3
+        integer :: i
+
+        do i=1,length
+            in1(i,1)=2*(in(i,1)-xmin)/(xmax-xmin)-1
+        end do
+        ! write(*,*)in1
+        value1=matmul(in1, weights1)
+        do i=1, length
+            value1(i, :) = value1(i, :) + bias1(1, :)
+        end do
+        value1=tanh(value1)
+    
+        value2=matmul(value1, weights2)
+        do i=1, length
+            value2(i, :) = value2(i, :) + bias2(1, :)
+        end do
+        value2=tanh(value2)
+        value3=matmul(value2, weights3)
+        do i=1, length
+            value3(i, :) = value3(i, :) + bias3
+        end do
+        do i=1,length
+        value3(i,1)=(value3(i,1)+1)/2*(ymax-ymin)+ymin
+        end do
+        value3 = -value3/27.211407953d0
+    end subroutine 
+
+    subroutine ml_ABF_field(xi,dAdxi)
+        implicit none
+        double precision,dimension(2,1)::xiin
+        double precision,dimension(2,1)::A
+        double precision, intent(in) :: xi 
+        double precision, intent(out) :: dAdxi
+        double precision, parameter :: dx=1d-5
+        xiin(1,1)=xi+dx
+        xiin(2,1)=xi-dx
+        call ml_ABF_model(xiin,A,2)
+        dAdxi=(A(1,1)-A(2,1))/2.0d0/dx
+    end subroutine
+
+    subroutine add_ABF_potential(xi, dxi, V, dVdq, Natoms, Nbeads)
+
+        implicit none
+        external potential
+        integer, intent(in) :: Natoms, Nbeads
+        double precision, intent(in) :: xi, dxi(3,Natoms)
+        ! double precision, intent(in) :: xi_current, kforce
+        double precision, intent(inout) :: V(Nbeads), dVdq(3,Natoms,Nbeads)
+        double precision :: V_ABF(1,1)
+        double precision :: xi_ABF(1,1)
+        double precision :: delta
+        integer :: i, j, k
+        xi_ABF(1,1)=xi
+        call ml_ABF_model(xi_ABF,V_ABF,1)
+
+        ! Add umbrella potential
+        do k = 1, Nbeads
+            V(k) = V(k) + V_ABF(1,1)
+        end do
+        call ml_ABF_field(xi,delta)
+        ! write(*,*)delta
+        ! Add umbrella force
+        if (xi<-0.2d0) then
+            delta=delta+10*(xi+0.2d0)
+        end if
+        if (xi>1.2d0) then
+            delta=delta+10*(xi-1.2d0)
+        end if
+
+
+        do i = 1, 3
+            do j = 1, Natoms
+                do k = 1, Nbeads
+                    dVdq(i,j,k) = dVdq(i,j,k) + delta * dxi(i,j)
+                end do
+            end do
+        end do
+
+    end subroutine add_ABF_potential
+
+
+    subroutine equilibrate_ABF(t, p, q,xi_list, Natoms, Nbeads, steps, potential, result)
+
+        use transition_state, only: check_for_valid_position
+
+        implicit none
+        external potential
+        integer, intent(in) :: Natoms, Nbeads
+        double precision, intent(inout) :: t, p(3,Natoms,Nbeads), q(3,Natoms,Nbeads)
+        integer, intent(in) :: steps
+        double precision, intent(inout) :: xi_list(steps)
+        !!integer, intent(in) :: constrain, save_trajectory
+        ! integer, intent(in) :: constrain
+        integer, intent(out) :: result
+
+        double precision :: V(Nbeads), dVdq(3,Natoms,Nbeads)
+        double precision :: xi, dxi(3,Natoms), d2xi(3,Natoms,3,Natoms)
+        double precision :: centroid(3,Natoms)
+        integer :: step, andersen_sampling_steps
+
+        integer :: save_trajectory
+
+        integer :: i, j,k 
+
+        !!print *, "xi_current: ", xi_current
+
+        result = 0
+        ! save_trajectory = 0
+        !!save_trajectory = 1 !! Test only!
+
+        ! Set up Andersen thermostat (if turned on)
+        ! andersen_sampling_steps = int(andersen_sampling_time / dt)
+        ! if (thermostat .eq. 1) then
+        !     if (andersen_sampling_time .gt. 0) then
+        !         andersen_sampling_steps = int(andersen_sampling_time / dt)
+        !     else
+        !         andersen_sampling_steps = int(dsqrt(dble(steps)))
+        !     end if
+        ! end if
+        !!! Set up GLE thermostat (if turned on)
+        !!if (thermostat .eq. 2) then
+        !!    call gle_initialize(dt, Natoms, Nbeads, gle_A(1:gle_Ns+1,1:gle_Ns+1), gle_C(1:gle_Ns+1,1:gle_Ns+1), gle_Ns)
+        !!end if
+        andersen_sampling_steps = int(dsqrt(dble(steps)))
+        if (save_trajectory .eq. 1) then
+            open(unit=77,file='equilibrate.xyz')
+            open(unit=88,file='equilibrate_centroid.xyz')
+            call update_vmd_output(q, Natoms, Nbeads, 77, 88)
+        end if
+
+        call get_centroid(q, Natoms, Nbeads, centroid)
+        !!print *, "centroid: "
+        !!print *, centroid
+        call get_reaction_coordinate(centroid, Natoms, 1.0d0, xi, dxi, d2xi)
+        !!print *, "xi_current: ", xi_current
+        !!print *, "xi: ", xi
+        !!print *, "3"
+        !!print *, ""
+        !!do j=1, Natoms
+        !!  print '(A8, 3F12.6)', "C", (centroid(i,j),i=1,3)
+        !!end do
+        !!stop
+        call potential(q, V, dVdq, Natoms, Nbeads, result)
+        if (result > 0) then
+            ! The initial position is unphysical, so abort
+            result = -1
+            return
+        end if
+        ! if (mode .eq. 1) then
+        call add_ABF_potential(xi, dxi, V, dVdq, Natoms, Nbeads)
+        call add_bias_potential(dxi, d2xi, V, dVdq, Natoms, Nbeads)
+        ! end if
+
+        ! Apply GLE thermostat if turned on
+        !!if (thermostat .eq. 2) then
+        !!    call gle_thermostat(p, mass, beta, dxi, Natoms, Nbeads, gle_Ns, constrain, result)
+        !!    if (result .ne. 0) return
+        !!end if
+
+        do step = 1, steps
+            call verlet_step_ABF(t, p, q, V, dVdq, xi, dxi, d2xi, Natoms, Nbeads,  potential, result,'NVE')
+            if (result .ne. 0) exit
+
+            ! If constraining to dividing surface, check that the values of
+            ! the forming and breaking bonds are reasonable
+            ! if (constrain .eq. 1) then
+            !     call get_centroid(q, Natoms, Nbeads, centroid)
+            !     call check_for_valid_position(centroid, Natoms, 50.0d0, result)
+            !     if (result .ne. 0) then
+            !         write (*,fmt='(A)') &
+            !             'Error: Invalid geometry for recrossing factor parent trajectory. Restarting trajectory.'
+            !         exit
+            !     end if
+            ! end if
+
+            ! if (save_trajectory .eq. 1) call update_vmd_output(q, Natoms, Nbeads, 77, 88,p,V)
+
+            ! Apply Andersen thermostat (if turned on)
+            if (thermostat .eq. 1) then
+            !!    if (mod(step, andersen_sampling_steps) .eq. 0) call sample_momentum(p, mass, beta, Natoms, Nbeads)
+              if (mod(step, andersen_sampling_steps) .eq. 0) then
+                call verlet_step_ABF(t, p, q, V, dVdq, xi, dxi, d2xi, Natoms,Nbeads, potential, result,'NVT')
+                if (save_trajectory .eq. 1) call update_vmd_output(q, Natoms, Nbeads, 77, 88,p,V)
+              end if
+            end if
+            xi_list(step)=xi
+            ! Apply GLE thermostat if turned on
+            !!if (thermostat .eq. 2) then
+            !!    call gle_thermostat(p, mass, beta, dxi, Natoms, Nbeads, gle_Ns, constrain, result)
+            !!    if (result .ne. 0) return
+            !!end if
+
+        end do
+
+        ! Clean up GLE thermostat (if turned on)
+        ! if (thermostat .eq. 2) then
+        !     call gle_cleanup()
+        ! end if
+
+        ! if (save_trajectory .eq. 1) then
+        !     close(unit=77)
+        !     close(unit=88)
+        ! end if
+
+    end subroutine 
+
+    subroutine verlet_step_ABF(t, p, q, V, dVdq, xi, dxi, d2xi, Natoms, Nbeads, potential, result,ensemble)
+
+        implicit none
+        external potential, reactants_surface, transition_state_surface
+        integer, intent(in) :: Natoms, Nbeads
+        double precision, intent(inout) :: t, p(3,Natoms,Nbeads), q(3,Natoms,Nbeads)
+        double precision, intent(inout) :: V(Nbeads), dVdq(3,Natoms,Nbeads)
+        double precision, intent(inout) :: xi, dxi(3,Natoms), d2xi(3,Natoms,3,Natoms)
+        integer, intent(out) :: result
+        character(len=3),intent(in)     :: ensemble
+
+        double precision :: centroid(3,Natoms)
+        integer :: i, j
+
+        result = 0
+
+        ! Update momentum (half time step)
+        p = p - 0.5d0 * dt * dVdq
+
+        ! Update position (full time step)
+        if (Nbeads .eq. 1) then
+            ! For a single bead, there are no free ring polymer terms to add,
+            ! so we simply update the positions using the momentum, as in
+            ! classical trajectories
+            do i = 1, 3
+                do j = 1, Natoms
+                    q(i,j,1) = q(i,j,1) + p(i,j,1) * dt / mass(j)
+                end do
+            end do
+        else
+            ! For multiple beads, we update the positions and momenta for the
+            ! harmonic free ring term in the Hamiltonian by transforming to
+            ! and from normal mode space
+            call free_ring_polymer_step(p, q, Natoms, Nbeads,ensemble)
+        end if
+
+        ! If constrain is on, the evolution will be constrained to the
+        ! transition state dividing surface
+        ! if (constrain .eq. 1) call constrain_to_dividing_surface(p, q, dxi, Natoms, Nbeads, xi_current, result)
+        if (result .ne. 0) return
+
+        ! Update reaction coordinate value, gradient, and Hessian
+        call get_centroid(q, Natoms, Nbeads, centroid)
+        call get_reaction_coordinate(centroid, Natoms, 1.0d0, xi, dxi, d2xi)
+
+        ! Update potential and forces using new position
+        call potential(q, V, dVdq, Natoms, Nbeads, result)
+        if (result > 0) return
+        ! if (mode .eq. 1) then
+            call add_ABF_potential(xi, dxi, V, dVdq, Natoms, Nbeads)
+            call add_bias_potential(dxi, d2xi, V, dVdq, Natoms, Nbeads)
+        ! end if
+
+        ! Update momentum (half time step)
+        p = p - 0.5d0 * dt * dVdq
+
+        ! Constrain momentum again
+        ! if (constrain .eq. 1) call constrain_momentum_to_dividing_surface(p, dxi, Natoms, Nbeads)
+
+        ! Update time
+        t = t + dt
+
+    end subroutine 
+
+
+
     ! subroutine prepare_CC(Nbeads)
     ! Allow an RPMD trajectory to equilibrate in the presence of an Andersen
     ! thermostat, with option to constrain the trajectory to the transition

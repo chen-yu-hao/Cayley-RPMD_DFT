@@ -188,7 +188,8 @@ if __name__ == '__main__':
             system.computeRateCoefficient()
         elif job == 'ABF':
             print("call ABF successfully")
-            system.ABF()
+            dt, equilibrationTime=params
+            system.ABF(dt,equilibrationTime)
     # print(jobList)
     
     # Print some information to the end of the log

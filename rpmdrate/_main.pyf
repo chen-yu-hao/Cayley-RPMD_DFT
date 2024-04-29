@@ -13,6 +13,30 @@ python module _main__user__routines
         end subroutine potential
     end interface
 end python module _main__user__routines
+python module equilibrate_abf__user__routines 
+    interface equilibrate_abf_user_interface 
+        subroutine potential(q,v,dvdq,natoms,nbeads,result) ! in :_main:_main.f90:system:equilibrate_abf:unknown_interface
+            double precision dimension(3,natoms,nbeads),intent(inout) :: q
+            double precision dimension(nbeads),depend(nbeads) :: v
+            double precision dimension(3,natoms,nbeads),depend(natoms,nbeads) :: dvdq
+            integer, optional,intent(in),check(shape(q, 1) == natoms),depend(q) :: natoms=shape(q, 1)
+            integer, optional,intent(in),check(shape(q, 2) == nbeads),depend(q) :: nbeads=shape(q, 2)
+            integer intent(out) :: result
+        end subroutine potential
+    end interface equilibrate_abf_user_interface
+end python module equilibrate_abf__user__routines
+python module verlet_step_abf__user__routines 
+    interface verlet_step_abf_user_interface 
+        subroutine potential(q,v,dvdq,natoms,nbeads,result) ! in :_main:_main.f90:system:verlet_step_abf:unknown_interface
+            double precision dimension(3,natoms,nbeads),intent(inout) :: q
+            double precision dimension(nbeads),intent(inout),depend(nbeads) :: v
+            double precision dimension(3,natoms,nbeads),intent(inout),depend(natoms,nbeads) :: dvdq
+            integer, optional,intent(in),check(shape(q, 1) == natoms),depend(q) :: natoms=shape(q, 1)
+            integer, optional,intent(in),check(shape(q, 2) == nbeads),depend(q) :: nbeads=shape(q, 2)
+            integer intent(out) :: result
+        end subroutine potential
+    end interface verlet_step_abf_user_interface
+end python module verlet_step_abf__user__routines
 python module _main ! in 
     interface  ! in :_main
         module system ! in :_main:rpmd/_main.f90
@@ -31,6 +55,70 @@ python module _main ! in
             integer :: gle_ns
             double precision :: gle_a(max_gle_ns+1,max_gle_ns+1)
             double precision :: gle_c(max_gle_ns+1,max_gle_ns+1)
+            integer, parameter,optional :: n_in=1
+            integer, parameter,optional :: n_hid_0=16
+            integer, parameter,optional :: n_hid_1=8
+            double precision dimension(1,16) :: weights1
+            double precision dimension(16,8) :: weights2
+            double precision dimension(8,1) :: weights3
+            double precision dimension(1,16) :: bias1
+            double precision dimension(1,8) :: bias2
+            double precision :: bias3
+            double precision :: xmax
+            double precision :: xmin
+            double precision :: ymax
+            double precision :: ymin
+            subroutine initialize_mlabf ! in :_main:rpmd/_main.f90:system
+            end subroutine initialize_mlabf
+            subroutine ml_abf_model(in,value3,length) ! in :_main:rpmd/_main.f90:system
+            double precision dimension(length,1) :: in
+            double precision dimension(length,1),intent(out),depend(length) :: value3
+            integer, optional,intent(in),check(shape(in, 0) == length),depend(in) :: length=shape(in, 0)
+            end subroutine ml_abf_model
+            subroutine ml_abf_field(xi,dadxi) ! in :_main:_main.f90:system
+                double precision intent(in) :: xi
+                double precision intent(out) :: dadxi
+            end subroutine ml_abf_field
+            subroutine add_abf_potential(xi,dxi,v,dvdq,natoms,nbeads) ! in :_main:rpmd/_main.f90:system
+                double precision intent(in) :: xi
+                double precision dimension(3,natoms),intent(in) :: dxi
+                double precision dimension(nbeads),intent(inout) :: v
+                double precision dimension(3,natoms,nbeads),intent(inout),depend(nbeads,natoms) :: dvdq
+                integer, optional,intent(in),check(shape(dxi, 1) == natoms),depend(dxi) :: natoms=shape(dxi, 1)
+                integer, optional,intent(in),check(shape(v, 0) == nbeads),depend(v) :: nbeads=shape(v, 0)
+            end subroutine add_abf_potential
+            subroutine equilibrate_abf(t,p,q,xi_list,natoms,nbeads,steps,potential,result) ! in :_main:_main.f90:system
+                use transition_state, only: check_for_valid_position
+                use _main__user__routines
+                double precision intent(inout) :: t
+                double precision dimension(3,natoms,nbeads),intent(inout) :: p
+                double precision dimension(3,natoms,nbeads),intent(inout),depend(natoms,nbeads) :: q
+                double precision dimension(steps),intent(inout) :: xi_list
+                integer, optional,intent(in),check(shape(p, 1) == natoms),depend(p) :: natoms=shape(p, 1)
+                integer, optional,intent(in),check(shape(p, 2) == nbeads),depend(p) :: nbeads=shape(p, 2)
+                integer, optional,intent(in),check(shape(xi_list, 0) == steps),depend(xi_list) :: steps=shape(xi_list, 0)
+                external potential
+                integer intent(out) :: result
+            end subroutine equilibrate_abf
+            subroutine verlet_step_abf(t,p,q,v,dvdq,xi,dxi,d2xi,natoms,nbeads,potential,result,ensemble) ! in :_main:_main.f90:system
+                use _main__user__routines
+                double precision intent(inout) :: t
+                double precision dimension(3,natoms,nbeads),intent(inout) :: p
+                double precision dimension(3,natoms,nbeads),intent(inout),depend(natoms,nbeads) :: q
+                double precision dimension(nbeads),intent(inout),depend(nbeads) :: v
+                double precision dimension(3,natoms,nbeads),intent(inout),depend(natoms,nbeads) :: dvdq
+                double precision intent(inout) :: xi
+                double precision dimension(3,natoms),intent(inout),depend(natoms) :: dxi
+                double precision dimension(3,natoms,3,natoms),intent(inout),depend(natoms) :: d2xi
+                integer, optional,intent(in),check(shape(p, 1) == natoms),depend(p) :: natoms=shape(p, 1)
+                integer, optional,intent(in),check(shape(p, 2) == nbeads),depend(p) :: nbeads=shape(p, 2)
+                double precision intent(in) :: xi_current
+                external potential
+                double precision intent(in) :: kforce
+                integer intent(in) :: constrain
+                integer intent(out) :: result
+                character*3 intent(in) :: ensemble
+            end subroutine verlet_step_abf
             subroutine equilibrate(t,p,q,natoms,nbeads,steps,xi_current,potential,kforce,constrain,save_trajectory,result) ! in :_main:rpmd/_main.f90:system
                 use _main__user__routines
                 double precision intent(inout) :: t

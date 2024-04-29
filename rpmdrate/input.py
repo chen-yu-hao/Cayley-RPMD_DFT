@@ -95,9 +95,9 @@ def computeRateCoefficient():
     global jobList
     jobList.append(['rate', tuple()])
 
-def ABF():
+def ABF(dt,evolutionTime):
     global jobList
-    jobList.append(['ABF',tuple()])
+    jobList.append(['ABF',(dt, evolutionTime )])
 
 getPotential = None
 def potential(q):

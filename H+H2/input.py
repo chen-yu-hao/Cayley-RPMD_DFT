@@ -6,7 +6,7 @@ from h3_bkmp2 import get_potential
 ################################################################################
  
 label = 'H + H2 -> HH + H' 
-tranums=1
+tranums=20
 evotime=50
 eqi=10
 reactants( 
@@ -69,7 +69,7 @@ windows = []
 #     windows.append(window) 
 
 
-for xi in numpy.arange(-0.02, 1.05, 0.01): 
+for xi in numpy.arange(-0.1, 1.20, 0.01): 
     window = Window(xi=xi, kforce=0.10*T, trajectories=tranums, equilibrationTime=(eqi,"ps"), evolutionTime=(evotime,"ps")) 
     #window = Window(xi=xi, kforce=0.0*T, trajectories=1, equilibrationTime=(1,"ps"), evolutionTime=(1,"ps"))  ## Energy conversation test only!!
 
@@ -81,8 +81,8 @@ conductUmbrellaSampling(
     saveTrajectories = False 
     ) 
 
-# computePotentialOfMeanForce(windows=windows, xi_min=-0.02, xi_max=1.02, bins=50000) 
-ABF()
+# computePotentialOfMeanForce(windows=windows, xi_min=-0.1, xi_max=1.20, bins=50000) 
+ABF(dt=(0.5,"fs"),evolutionTime=(100,"fs"))
 # computeRecrossingFactor( 
 #     dt = (0.5,"fs"), 
 #     equilibrationTime = (50,"ps"), 

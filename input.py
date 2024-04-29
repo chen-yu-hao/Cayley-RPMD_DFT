@@ -51,7 +51,7 @@ generateUmbrellaConfigurations(
 
 windows = [] 
 
-for xi in numpy.arange(-0.05, 1.05, 0.01): 
+for xi in numpy.arange(-0.05, 1.20, 0.01): 
     window = Window(xi=xi, kforce=0.10*T, trajectories=tranums, equilibrationTime=(eqi,"ps"), evolutionTime=(evotime,"ps")) 
     #window = Window(xi=xi, kforce=0.0*T, trajectories=1, equilibrationTime=(1,"ps"), evolutionTime=(1,"ps"))  ## Energy conversation test only!!
 
@@ -63,7 +63,7 @@ conductUmbrellaSampling(
     saveTrajectories = False 
     ) 
 
-computePotentialOfMeanForce(windows=windows, xi_min=-0.05, xi_max=1.05, bins=20000) 
+computePotentialOfMeanForce(windows=windows, xi_min=-0.05, xi_max=1.20, bins=20000) 
 
 computeRecrossingFactor( 
     dt = (0.5,"fs"), 
