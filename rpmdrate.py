@@ -186,6 +186,10 @@ if __name__ == '__main__':
             system.computeRecrossingFactor(dt, equilibrationTime, childTrajectories, childSamplingTime, childrenPerSampling, childEvolutionTime, xi_current, saveParentTrajectory, saveChildTrajectories)
         elif job == 'rate':
             system.computeRateCoefficient()
+        elif job == 'ABF':
+            print("call ABF successfully")
+            system.ABF()
+    # print(jobList)
     
     # Print some information to the end of the log
     logFooter()

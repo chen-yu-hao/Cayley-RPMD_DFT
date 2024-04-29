@@ -95,6 +95,10 @@ def computeRateCoefficient():
     global jobList
     jobList.append(['rate', tuple()])
 
+def ABF():
+    global jobList
+    jobList.append(['ABF',tuple()])
+
 getPotential = None
 def potential(q):
     global getPotential
@@ -129,6 +133,7 @@ def loadInputFile(path, T, Nbeads, processes=1):
         'computePotentialOfMeanForce': computePotentialOfMeanForce,
         'computeRecrossingFactor': computeRecrossingFactor,
         'computeRateCoefficient': computeRateCoefficient,
+        "ABF":ABF,
         'numpy': numpy,
         'T': T,
         'Nbeads': Nbeads,

@@ -933,7 +933,10 @@ class RPMD:
                 raise RPMDError('You must run computePotentialOfMeanForce() or specify xi_current before running computeRecrossingFactor().')
             index = numpy.argmax(self.potentialOfMeanForce[1,:])
             xi_current = self.potentialOfMeanForce[0,index]
-        
+        ############################################################################################
+        #xi_current=0.83491175
+        # xi_current=0.99309965
+        ############################################################################################
         dt = float(quantity.convertTime(dt, "ps")) / constants.au2ps
         equilibrationTime = float(quantity.convertTime(equilibrationTime, "ps")) / constants.au2ps
         childEvolutionTime = float(quantity.convertTime(childEvolutionTime, "ps")) / constants.au2ps
@@ -1037,23 +1040,13 @@ class RPMD:
             
             # Equilibrate parent trajectory while constraining to dividing surface
             # and sampling from Andersen thermostat
-
-            #################load equilibrated position from checkpoint, Yuhao Chen###############################
-            try:
-                q0=numpy.load(os.path.join(os.path.join(workingDirectory, 'recrossing.npy')))
-            except:
-                pass
-            #####################################################################################################
-            
             logging.info('Equilibrating parent trajectory for {0:g} ps...'.format(equilibrationSteps * self.dt * constants.au2ps))
             result = 1
             # print(xi_current)
             while result != 0:
                 q = numpy.asfortranarray(q0.copy())
                 p = self.sampleMomentum()            
-                result = system.equilibrate(0, p, q, equilibrationSteps, self.xi_current, self.potential, 0.0, True, False)            
-            numpy.save(os.path.join(workingDirectory, 'recrossing.npy'), q)
-
+                result = system.equilibrate(0, p, q, equilibrationSteps, self.xi_current, self.potential, 0.0, True, False)
             
             logging.info('Finished equilibrating parent trajectory.')
             logging.info('')
@@ -1104,12 +1097,10 @@ class RPMD:
                 # surface and sampling from Andersen thermostat
                 logging.info('Evolving parent trajectory to {0:g} ps...'.format((parentIter+1) * childSamplingSteps * self.dt * constants.au2ps))
                 result = system.equilibrate(0, p, q, childSamplingSteps, self.xi_current, self.potential, 0.0, True, False)
-                
                 while result != 0:
                     q = numpy.asfortranarray(q0.copy())
                     p = self.sampleMomentum()            
                     result = system.equilibrate(0, p, q, equilibrationSteps, self.xi_current, self.potential, 0.0, True, saveParentTrajectory)
-                numpy.save(os.path.join(workingDirectory, 'recrossing.npy'), q)
                 
                 parentIter += 1
             
@@ -1747,3 +1738,57 @@ class RPMD:
             random_init_seed(self.randomSeed)
         else:
             random_init()
+    def ABF_fit(self):
+        import os
+        import numpy as np
+        import tensorflow as tf
+        import matplotlib.pyplot as plt
+        import rpmdrate.lm as lm
+        workingDirectory = self.createWorkingDirectory()
+        PMF_filename=os.path.join(workingDirectory, 'potential_of_mean_force.dat')
+        PMF_tem=os.path.join(workingDirectory, 'PMF')
+        with open (PMF_filename,"r")as f:
+            PMF_str=f.readlines()[12:-1]
+            with open(PMF_tem,"w")as fw:
+                fw.writelines(PMF_str)
+        PMF_data=np.loadtxt(PMF_tem)
+        os.remove(PMF_tem)
+        from sklearn.model_selection import train_test_split
+        from sklearn.preprocessing import MinMaxScaler
+        from sklearn.utils import shuffle
+        from sklearn.preprocessing import RobustScaler
+        PMF_data=PMF_data[:]
+        #data:需要进行分割的数据集
+        #random_state:设置随机种子，保证每次运行生成相同的随机数
+        #test_size:将数据分割成训练集的比例
+        scaler = MinMaxScaler(feature_range=(-1,1))
+        PMF_data = scaler.fit_transform(PMF_data)
+        X,Y= shuffle(PMF_data[:,0], PMF_data[:,1])
+        X_train,X_valid=X[:int(X.shape[0]*0.8)],X[int(X.shape[0]*0.9):]
+        Y_train,Y_valid=Y[:int(Y.shape[0]*0.8)],Y[int(Y.shape[0]*0.9):]
+        model0 = tf.keras.models.Sequential([
+                tf.keras.layers.Dense(32, activation='tanh',input_shape=(1,)),
+                tf.keras.layers.Dense(32, activation='tanh'),
+                # tf.keras.layers.Dense(10),
+                tf.keras.layers.Dense(1)
+        ])
+        lr=1
+        model_wrapper0 = lm.ModelWrapper(model0)
+        model_wrapper0.compile(
+            optimizer=tf.keras.optimizers.SGD(learning_rate=lr),
+            loss=lm.MeanSquaredError(),
+            damping_algorithm=lm.DampingAlgorithm(
+                adaptive_scaling=True,
+                # fletcher=True
+            ),
+            solve_method="solve",
+            jacobian_max_num_rows=500,
+            metrics=[
+                tf.keras.metrics.MeanSquaredError()
+            ]
+        )
+        model_wrapper0.fit(X_train, Y_train, epochs=1000,batch_size=5000,validation_data=(X_valid,Y_valid))
+        model_wrapper0.save("model0.keras")
+    def ABF(self):
+        self.ABF_fit()
+
