@@ -1,0 +1,24 @@
+*********************
+RPMD rate coefficient
+*********************
+
+Temperature                             = 300 K
+Number of beads                         = 32
+
+k_QTST(T;s0)                            = 2.43445e-08 cm^3/(molecule*s)
+                                        = 1.46606e+16 cm^3/(mol*s)
+
+Static factor                           = 1.56586e-08
+
+Maximum reaction coordinate (xi_max)    = 1.0001252025
+
+k_QTST(T;xi_max)                        = 3.812e-16 cm^3/(molecule*s)
+                                        = 2.29564e+08 cm^3/(mol*s)
+
+Recrossing factor                       = 1
+
+k_RPMD(T)                               = 3.812e-16 cm^3/(molecule*s)
+                                        = 2.29564e+08 cm^3/(mol*s)
+
+Free Energy Change                      = 10.7143691207 kcal/mol
+

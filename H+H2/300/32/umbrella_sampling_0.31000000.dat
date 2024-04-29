@@ -1,0 +1,16 @@
+**********************
+RPMD umbrella sampling
+**********************
+
+Temperature                             = 300 K
+Number of beads                         = 32
+Time step                               = 0.0005 ps
+Reaction coordinate                     = 0.31000000
+Equilibration time                      = 10 ps (20000 steps)
+Trajectory evolution time               = 50 ps (100000 steps)
+Force constant                          = 30
+
+=============== =============== =========== =============== ===============
+total av        total av2       count       xi_mean         xi_var
+=============== =============== =========== =============== ===============
+ 30993.87460171   9608.67550959      100000     3.09939e-01     2.47288e-05
