@@ -41887,3 +41887,899 @@ Loading saved output for xi = 1.19000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2
 
 
 RPMDrate execution terminated at Mon Apr 29 22:31:34 2024
+RPMDrate execution initiated at Mon Apr 29 23:19:22 2024
+
+###############################################################
+#                                                             #
+#                          ********                           #
+#                          RPMDrate                           #
+#                          ********                           #
+#                                                             #
+#   Version: 0.1.0 (15 Jun 2012)                              #
+#                                                             #
+#   Authors: Joshua W. Allen <jwallen@mit.edu>                #
+#            William H. Green <whgreen@mit.edu>               #
+#            Yury V. Suleimanov <ysuleyma@mit.edu>            #
+#                               <ysuleyma@princeton.edu>      #
+#                                                             #
+#   Website: http://github.com/GreenGroup/RPMDrate            #
+#                                                             #
+###############################################################
+
+Reading input file 'input.py'...
+
+****************************
+RPMD umbrella configurations
+****************************
+
+Parameters
+==========
+Temperature                             = 300 K
+Number of beads                         = 1
+Time step                               = 0.0001 ps
+Number of umbrella integration windows  = 133
+Trajectory evolution time               = 20 ps (200000 steps)
+
+Loading saved output from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/umbrella_configurations.dat
+Using results of previously saved umbrella configurations.
+
+**********************
+RPMD umbrella sampling
+**********************
+
+Parameters
+==========
+Temperature                             = 300 K
+Number of beads                         = 32
+Time step                               = 0.0005 ps
+Number of umbrella integration windows  = 130
+
+Loading saved output for xi = -0.10000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_-0.10000000.dat
+Loading saved output for xi = -0.09000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_-0.09000000.dat
+Loading saved output for xi = -0.08000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_-0.08000000.dat
+Loading saved output for xi = -0.07000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_-0.07000000.dat
+Loading saved output for xi = -0.06000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_-0.06000000.dat
+Loading saved output for xi = -0.05000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_-0.05000000.dat
+Loading saved output for xi = -0.04000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_-0.04000000.dat
+Loading saved output for xi = -0.03000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_-0.03000000.dat
+Loading saved output for xi = -0.02000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_-0.02000000.dat
+Loading saved output for xi = -0.01000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_-0.01000000.dat
+Loading saved output for xi = -0.00000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_-0.00000000.dat
+Loading saved output for xi = 0.01000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.01000000.dat
+Loading saved output for xi = 0.02000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.02000000.dat
+Loading saved output for xi = 0.03000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.03000000.dat
+Loading saved output for xi = 0.04000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.04000000.dat
+Loading saved output for xi = 0.05000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.05000000.dat
+Loading saved output for xi = 0.06000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.06000000.dat
+Loading saved output for xi = 0.07000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.07000000.dat
+Loading saved output for xi = 0.08000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.08000000.dat
+Loading saved output for xi = 0.09000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.09000000.dat
+Loading saved output for xi = 0.10000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.10000000.dat
+Loading saved output for xi = 0.11000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.11000000.dat
+Loading saved output for xi = 0.12000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.12000000.dat
+Loading saved output for xi = 0.13000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.13000000.dat
+Loading saved output for xi = 0.14000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.14000000.dat
+Loading saved output for xi = 0.15000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.15000000.dat
+Loading saved output for xi = 0.16000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.16000000.dat
+Loading saved output for xi = 0.17000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.17000000.dat
+Loading saved output for xi = 0.18000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.18000000.dat
+Loading saved output for xi = 0.19000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.19000000.dat
+Loading saved output for xi = 0.20000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.20000000.dat
+Loading saved output for xi = 0.21000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.21000000.dat
+Loading saved output for xi = 0.22000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.22000000.dat
+Loading saved output for xi = 0.23000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.23000000.dat
+Loading saved output for xi = 0.24000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.24000000.dat
+Loading saved output for xi = 0.25000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.25000000.dat
+Loading saved output for xi = 0.26000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.26000000.dat
+Loading saved output for xi = 0.27000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.27000000.dat
+Loading saved output for xi = 0.28000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.28000000.dat
+Loading saved output for xi = 0.29000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.29000000.dat
+Loading saved output for xi = 0.30000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.30000000.dat
+Loading saved output for xi = 0.31000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.31000000.dat
+Loading saved output for xi = 0.32000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.32000000.dat
+Loading saved output for xi = 0.33000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.33000000.dat
+Loading saved output for xi = 0.34000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.34000000.dat
+Loading saved output for xi = 0.35000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.35000000.dat
+Loading saved output for xi = 0.36000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.36000000.dat
+Loading saved output for xi = 0.37000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.37000000.dat
+Loading saved output for xi = 0.38000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.38000000.dat
+Loading saved output for xi = 0.39000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.39000000.dat
+Loading saved output for xi = 0.40000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.40000000.dat
+Loading saved output for xi = 0.41000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.41000000.dat
+Loading saved output for xi = 0.42000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.42000000.dat
+Loading saved output for xi = 0.43000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.43000000.dat
+Loading saved output for xi = 0.44000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.44000000.dat
+Loading saved output for xi = 0.45000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.45000000.dat
+Loading saved output for xi = 0.46000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.46000000.dat
+Loading saved output for xi = 0.47000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.47000000.dat
+Loading saved output for xi = 0.48000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.48000000.dat
+Loading saved output for xi = 0.49000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.49000000.dat
+Loading saved output for xi = 0.50000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.50000000.dat
+Loading saved output for xi = 0.51000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.51000000.dat
+Loading saved output for xi = 0.52000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.52000000.dat
+Loading saved output for xi = 0.53000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.53000000.dat
+Loading saved output for xi = 0.54000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.54000000.dat
+Loading saved output for xi = 0.55000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.55000000.dat
+Loading saved output for xi = 0.56000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.56000000.dat
+Loading saved output for xi = 0.57000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.57000000.dat
+Loading saved output for xi = 0.58000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.58000000.dat
+Loading saved output for xi = 0.59000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.59000000.dat
+Loading saved output for xi = 0.60000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.60000000.dat
+Loading saved output for xi = 0.61000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.61000000.dat
+Loading saved output for xi = 0.62000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.62000000.dat
+Loading saved output for xi = 0.63000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.63000000.dat
+Loading saved output for xi = 0.64000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.64000000.dat
+Loading saved output for xi = 0.65000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.65000000.dat
+Loading saved output for xi = 0.66000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.66000000.dat
+Loading saved output for xi = 0.67000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.67000000.dat
+Loading saved output for xi = 0.68000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.68000000.dat
+Loading saved output for xi = 0.69000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.69000000.dat
+Loading saved output for xi = 0.70000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.70000000.dat
+Loading saved output for xi = 0.71000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.71000000.dat
+Loading saved output for xi = 0.72000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.72000000.dat
+Loading saved output for xi = 0.73000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.73000000.dat
+Loading saved output for xi = 0.74000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.74000000.dat
+Loading saved output for xi = 0.75000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.75000000.dat
+Loading saved output for xi = 0.76000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.76000000.dat
+Loading saved output for xi = 0.77000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.77000000.dat
+Loading saved output for xi = 0.78000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.78000000.dat
+Loading saved output for xi = 0.79000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.79000000.dat
+Loading saved output for xi = 0.80000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.80000000.dat
+Loading saved output for xi = 0.81000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.81000000.dat
+Loading saved output for xi = 0.82000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.82000000.dat
+Loading saved output for xi = 0.83000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.83000000.dat
+Loading saved output for xi = 0.84000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.84000000.dat
+Loading saved output for xi = 0.85000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.85000000.dat
+Loading saved output for xi = 0.86000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.86000000.dat
+Loading saved output for xi = 0.87000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.87000000.dat
+Loading saved output for xi = 0.88000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.88000000.dat
+Loading saved output for xi = 0.89000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.89000000.dat
+Loading saved output for xi = 0.90000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.90000000.dat
+Loading saved output for xi = 0.91000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.91000000.dat
+Loading saved output for xi = 0.92000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.92000000.dat
+Loading saved output for xi = 0.93000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.93000000.dat
+Loading saved output for xi = 0.94000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.94000000.dat
+Loading saved output for xi = 0.95000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.95000000.dat
+Loading saved output for xi = 0.96000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.96000000.dat
+Loading saved output for xi = 0.97000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.97000000.dat
+Loading saved output for xi = 0.98000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.98000000.dat
+Loading saved output for xi = 0.99000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.99000000.dat
+Loading saved output for xi = 1.00000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_1.00000000.dat
+Loading saved output for xi = 1.01000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_1.01000000.dat
+Loading saved output for xi = 1.02000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_1.02000000.dat
+Loading saved output for xi = 1.03000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_1.03000000.dat
+Loading saved output for xi = 1.04000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_1.04000000.dat
+Loading saved output for xi = 1.05000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_1.05000000.dat
+Loading saved output for xi = 1.06000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_1.06000000.dat
+Loading saved output for xi = 1.07000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_1.07000000.dat
+Loading saved output for xi = 1.08000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_1.08000000.dat
+Loading saved output for xi = 1.09000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_1.09000000.dat
+Loading saved output for xi = 1.10000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_1.10000000.dat
+Loading saved output for xi = 1.11000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_1.11000000.dat
+Loading saved output for xi = 1.12000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_1.12000000.dat
+Loading saved output for xi = 1.13000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_1.13000000.dat
+Loading saved output for xi = 1.14000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_1.14000000.dat
+Loading saved output for xi = 1.15000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_1.15000000.dat
+Loading saved output for xi = 1.16000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_1.16000000.dat
+Loading saved output for xi = 1.17000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_1.17000000.dat
+Loading saved output for xi = 1.18000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_1.18000000.dat
+Loading saved output for xi = 1.19000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_1.19000000.dat
+
+RPMDrate execution initiated at Mon Apr 29 23:28:23 2024
+
+###############################################################
+#                                                             #
+#                          ********                           #
+#                          RPMDrate                           #
+#                          ********                           #
+#                                                             #
+#   Version: 0.1.0 (15 Jun 2012)                              #
+#                                                             #
+#   Authors: Joshua W. Allen <jwallen@mit.edu>                #
+#            William H. Green <whgreen@mit.edu>               #
+#            Yury V. Suleimanov <ysuleyma@mit.edu>            #
+#                               <ysuleyma@princeton.edu>      #
+#                                                             #
+#   Website: http://github.com/GreenGroup/RPMDrate            #
+#                                                             #
+###############################################################
+
+Reading input file 'input.py'...
+
+****************************
+RPMD umbrella configurations
+****************************
+
+Parameters
+==========
+Temperature                             = 300 K
+Number of beads                         = 1
+Time step                               = 0.0001 ps
+Number of umbrella integration windows  = 133
+Trajectory evolution time               = 20 ps (200000 steps)
+
+Loading saved output from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/umbrella_configurations.dat
+Using results of previously saved umbrella configurations.
+
+**********************
+RPMD umbrella sampling
+**********************
+
+Parameters
+==========
+Temperature                             = 300 K
+Number of beads                         = 32
+Time step                               = 0.0005 ps
+Number of umbrella integration windows  = 130
+
+Loading saved output for xi = -0.10000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_-0.10000000.dat
+Loading saved output for xi = -0.09000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_-0.09000000.dat
+Loading saved output for xi = -0.08000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_-0.08000000.dat
+Loading saved output for xi = -0.07000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_-0.07000000.dat
+Loading saved output for xi = -0.06000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_-0.06000000.dat
+Loading saved output for xi = -0.05000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_-0.05000000.dat
+Loading saved output for xi = -0.04000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_-0.04000000.dat
+Loading saved output for xi = -0.03000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_-0.03000000.dat
+Loading saved output for xi = -0.02000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_-0.02000000.dat
+Loading saved output for xi = -0.01000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_-0.01000000.dat
+Loading saved output for xi = -0.00000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_-0.00000000.dat
+Loading saved output for xi = 0.01000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.01000000.dat
+Loading saved output for xi = 0.02000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.02000000.dat
+Loading saved output for xi = 0.03000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.03000000.dat
+Loading saved output for xi = 0.04000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.04000000.dat
+Loading saved output for xi = 0.05000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.05000000.dat
+Loading saved output for xi = 0.06000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.06000000.dat
+Loading saved output for xi = 0.07000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.07000000.dat
+Loading saved output for xi = 0.08000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.08000000.dat
+Loading saved output for xi = 0.09000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.09000000.dat
+Loading saved output for xi = 0.10000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.10000000.dat
+Loading saved output for xi = 0.11000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.11000000.dat
+Loading saved output for xi = 0.12000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.12000000.dat
+Loading saved output for xi = 0.13000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.13000000.dat
+Loading saved output for xi = 0.14000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.14000000.dat
+Loading saved output for xi = 0.15000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.15000000.dat
+Loading saved output for xi = 0.16000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.16000000.dat
+Loading saved output for xi = 0.17000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.17000000.dat
+Loading saved output for xi = 0.18000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.18000000.dat
+Loading saved output for xi = 0.19000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.19000000.dat
+Loading saved output for xi = 0.20000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.20000000.dat
+Loading saved output for xi = 0.21000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.21000000.dat
+Loading saved output for xi = 0.22000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.22000000.dat
+Loading saved output for xi = 0.23000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.23000000.dat
+Loading saved output for xi = 0.24000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.24000000.dat
+Loading saved output for xi = 0.25000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.25000000.dat
+Loading saved output for xi = 0.26000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.26000000.dat
+Loading saved output for xi = 0.27000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.27000000.dat
+Loading saved output for xi = 0.28000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.28000000.dat
+Loading saved output for xi = 0.29000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.29000000.dat
+Loading saved output for xi = 0.30000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.30000000.dat
+Loading saved output for xi = 0.31000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.31000000.dat
+Loading saved output for xi = 0.32000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.32000000.dat
+Loading saved output for xi = 0.33000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.33000000.dat
+Loading saved output for xi = 0.34000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.34000000.dat
+Loading saved output for xi = 0.35000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.35000000.dat
+Loading saved output for xi = 0.36000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.36000000.dat
+Loading saved output for xi = 0.37000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.37000000.dat
+Loading saved output for xi = 0.38000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.38000000.dat
+Loading saved output for xi = 0.39000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.39000000.dat
+Loading saved output for xi = 0.40000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.40000000.dat
+Loading saved output for xi = 0.41000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.41000000.dat
+Loading saved output for xi = 0.42000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.42000000.dat
+Loading saved output for xi = 0.43000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.43000000.dat
+Loading saved output for xi = 0.44000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.44000000.dat
+Loading saved output for xi = 0.45000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.45000000.dat
+Loading saved output for xi = 0.46000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.46000000.dat
+Loading saved output for xi = 0.47000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.47000000.dat
+Loading saved output for xi = 0.48000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.48000000.dat
+Loading saved output for xi = 0.49000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.49000000.dat
+Loading saved output for xi = 0.50000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.50000000.dat
+Loading saved output for xi = 0.51000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.51000000.dat
+Loading saved output for xi = 0.52000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.52000000.dat
+Loading saved output for xi = 0.53000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.53000000.dat
+Loading saved output for xi = 0.54000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.54000000.dat
+Loading saved output for xi = 0.55000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.55000000.dat
+Loading saved output for xi = 0.56000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.56000000.dat
+Loading saved output for xi = 0.57000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.57000000.dat
+Loading saved output for xi = 0.58000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.58000000.dat
+Loading saved output for xi = 0.59000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.59000000.dat
+Loading saved output for xi = 0.60000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.60000000.dat
+Loading saved output for xi = 0.61000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.61000000.dat
+Loading saved output for xi = 0.62000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.62000000.dat
+Loading saved output for xi = 0.63000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.63000000.dat
+Loading saved output for xi = 0.64000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.64000000.dat
+Loading saved output for xi = 0.65000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.65000000.dat
+Loading saved output for xi = 0.66000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.66000000.dat
+Loading saved output for xi = 0.67000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.67000000.dat
+Loading saved output for xi = 0.68000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.68000000.dat
+Loading saved output for xi = 0.69000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.69000000.dat
+Loading saved output for xi = 0.70000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.70000000.dat
+Loading saved output for xi = 0.71000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.71000000.dat
+Loading saved output for xi = 0.72000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.72000000.dat
+Loading saved output for xi = 0.73000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.73000000.dat
+Loading saved output for xi = 0.74000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.74000000.dat
+Loading saved output for xi = 0.75000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.75000000.dat
+Loading saved output for xi = 0.76000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.76000000.dat
+Loading saved output for xi = 0.77000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.77000000.dat
+Loading saved output for xi = 0.78000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.78000000.dat
+Loading saved output for xi = 0.79000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.79000000.dat
+Loading saved output for xi = 0.80000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.80000000.dat
+Loading saved output for xi = 0.81000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.81000000.dat
+Loading saved output for xi = 0.82000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.82000000.dat
+Loading saved output for xi = 0.83000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.83000000.dat
+Loading saved output for xi = 0.84000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.84000000.dat
+Loading saved output for xi = 0.85000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.85000000.dat
+Loading saved output for xi = 0.86000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.86000000.dat
+Loading saved output for xi = 0.87000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.87000000.dat
+Loading saved output for xi = 0.88000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.88000000.dat
+Loading saved output for xi = 0.89000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.89000000.dat
+Loading saved output for xi = 0.90000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.90000000.dat
+Loading saved output for xi = 0.91000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.91000000.dat
+Loading saved output for xi = 0.92000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.92000000.dat
+Loading saved output for xi = 0.93000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.93000000.dat
+Loading saved output for xi = 0.94000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.94000000.dat
+Loading saved output for xi = 0.95000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.95000000.dat
+Loading saved output for xi = 0.96000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.96000000.dat
+Loading saved output for xi = 0.97000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.97000000.dat
+Loading saved output for xi = 0.98000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.98000000.dat
+Loading saved output for xi = 0.99000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.99000000.dat
+Loading saved output for xi = 1.00000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_1.00000000.dat
+Loading saved output for xi = 1.01000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_1.01000000.dat
+Loading saved output for xi = 1.02000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_1.02000000.dat
+Loading saved output for xi = 1.03000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_1.03000000.dat
+Loading saved output for xi = 1.04000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_1.04000000.dat
+Loading saved output for xi = 1.05000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_1.05000000.dat
+Loading saved output for xi = 1.06000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_1.06000000.dat
+Loading saved output for xi = 1.07000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_1.07000000.dat
+Loading saved output for xi = 1.08000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_1.08000000.dat
+Loading saved output for xi = 1.09000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_1.09000000.dat
+Loading saved output for xi = 1.10000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_1.10000000.dat
+Loading saved output for xi = 1.11000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_1.11000000.dat
+Loading saved output for xi = 1.12000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_1.12000000.dat
+Loading saved output for xi = 1.13000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_1.13000000.dat
+Loading saved output for xi = 1.14000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_1.14000000.dat
+Loading saved output for xi = 1.15000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_1.15000000.dat
+Loading saved output for xi = 1.16000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_1.16000000.dat
+Loading saved output for xi = 1.17000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_1.17000000.dat
+Loading saved output for xi = 1.18000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_1.18000000.dat
+Loading saved output for xi = 1.19000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_1.19000000.dat
+
+RPMDrate execution initiated at Mon Apr 29 23:28:40 2024
+
+###############################################################
+#                                                             #
+#                          ********                           #
+#                          RPMDrate                           #
+#                          ********                           #
+#                                                             #
+#   Version: 0.1.0 (15 Jun 2012)                              #
+#                                                             #
+#   Authors: Joshua W. Allen <jwallen@mit.edu>                #
+#            William H. Green <whgreen@mit.edu>               #
+#            Yury V. Suleimanov <ysuleyma@mit.edu>            #
+#                               <ysuleyma@princeton.edu>      #
+#                                                             #
+#   Website: http://github.com/GreenGroup/RPMDrate            #
+#                                                             #
+###############################################################
+
+Reading input file 'input.py'...
+
+****************************
+RPMD umbrella configurations
+****************************
+
+Parameters
+==========
+Temperature                             = 300 K
+Number of beads                         = 1
+Time step                               = 0.0001 ps
+Number of umbrella integration windows  = 133
+Trajectory evolution time               = 20 ps (200000 steps)
+
+Loading saved output from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/umbrella_configurations.dat
+Using results of previously saved umbrella configurations.
+
+**********************
+RPMD umbrella sampling
+**********************
+
+Parameters
+==========
+Temperature                             = 300 K
+Number of beads                         = 32
+Time step                               = 0.0005 ps
+Number of umbrella integration windows  = 130
+
+Loading saved output for xi = -0.10000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_-0.10000000.dat
+Loading saved output for xi = -0.09000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_-0.09000000.dat
+Loading saved output for xi = -0.08000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_-0.08000000.dat
+Loading saved output for xi = -0.07000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_-0.07000000.dat
+Loading saved output for xi = -0.06000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_-0.06000000.dat
+Loading saved output for xi = -0.05000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_-0.05000000.dat
+Loading saved output for xi = -0.04000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_-0.04000000.dat
+Loading saved output for xi = -0.03000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_-0.03000000.dat
+Loading saved output for xi = -0.02000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_-0.02000000.dat
+Loading saved output for xi = -0.01000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_-0.01000000.dat
+Loading saved output for xi = -0.00000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_-0.00000000.dat
+Loading saved output for xi = 0.01000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.01000000.dat
+Loading saved output for xi = 0.02000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.02000000.dat
+Loading saved output for xi = 0.03000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.03000000.dat
+Loading saved output for xi = 0.04000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.04000000.dat
+Loading saved output for xi = 0.05000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.05000000.dat
+Loading saved output for xi = 0.06000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.06000000.dat
+Loading saved output for xi = 0.07000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.07000000.dat
+Loading saved output for xi = 0.08000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.08000000.dat
+Loading saved output for xi = 0.09000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.09000000.dat
+Loading saved output for xi = 0.10000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.10000000.dat
+Loading saved output for xi = 0.11000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.11000000.dat
+Loading saved output for xi = 0.12000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.12000000.dat
+Loading saved output for xi = 0.13000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.13000000.dat
+Loading saved output for xi = 0.14000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.14000000.dat
+Loading saved output for xi = 0.15000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.15000000.dat
+Loading saved output for xi = 0.16000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.16000000.dat
+Loading saved output for xi = 0.17000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.17000000.dat
+Loading saved output for xi = 0.18000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.18000000.dat
+Loading saved output for xi = 0.19000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.19000000.dat
+Loading saved output for xi = 0.20000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.20000000.dat
+Loading saved output for xi = 0.21000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.21000000.dat
+Loading saved output for xi = 0.22000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.22000000.dat
+Loading saved output for xi = 0.23000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.23000000.dat
+Loading saved output for xi = 0.24000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.24000000.dat
+Loading saved output for xi = 0.25000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.25000000.dat
+Loading saved output for xi = 0.26000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.26000000.dat
+Loading saved output for xi = 0.27000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.27000000.dat
+Loading saved output for xi = 0.28000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.28000000.dat
+Loading saved output for xi = 0.29000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.29000000.dat
+Loading saved output for xi = 0.30000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.30000000.dat
+Loading saved output for xi = 0.31000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.31000000.dat
+Loading saved output for xi = 0.32000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.32000000.dat
+Loading saved output for xi = 0.33000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.33000000.dat
+Loading saved output for xi = 0.34000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.34000000.dat
+Loading saved output for xi = 0.35000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.35000000.dat
+Loading saved output for xi = 0.36000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.36000000.dat
+Loading saved output for xi = 0.37000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.37000000.dat
+Loading saved output for xi = 0.38000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.38000000.dat
+Loading saved output for xi = 0.39000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.39000000.dat
+Loading saved output for xi = 0.40000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.40000000.dat
+Loading saved output for xi = 0.41000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.41000000.dat
+Loading saved output for xi = 0.42000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.42000000.dat
+Loading saved output for xi = 0.43000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.43000000.dat
+Loading saved output for xi = 0.44000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.44000000.dat
+Loading saved output for xi = 0.45000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.45000000.dat
+Loading saved output for xi = 0.46000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.46000000.dat
+Loading saved output for xi = 0.47000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.47000000.dat
+Loading saved output for xi = 0.48000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.48000000.dat
+Loading saved output for xi = 0.49000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.49000000.dat
+Loading saved output for xi = 0.50000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.50000000.dat
+Loading saved output for xi = 0.51000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.51000000.dat
+Loading saved output for xi = 0.52000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.52000000.dat
+Loading saved output for xi = 0.53000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.53000000.dat
+Loading saved output for xi = 0.54000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.54000000.dat
+Loading saved output for xi = 0.55000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.55000000.dat
+Loading saved output for xi = 0.56000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.56000000.dat
+Loading saved output for xi = 0.57000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.57000000.dat
+Loading saved output for xi = 0.58000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.58000000.dat
+Loading saved output for xi = 0.59000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.59000000.dat
+Loading saved output for xi = 0.60000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.60000000.dat
+Loading saved output for xi = 0.61000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.61000000.dat
+Loading saved output for xi = 0.62000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.62000000.dat
+Loading saved output for xi = 0.63000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.63000000.dat
+Loading saved output for xi = 0.64000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.64000000.dat
+Loading saved output for xi = 0.65000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.65000000.dat
+Loading saved output for xi = 0.66000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.66000000.dat
+Loading saved output for xi = 0.67000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.67000000.dat
+Loading saved output for xi = 0.68000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.68000000.dat
+Loading saved output for xi = 0.69000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.69000000.dat
+Loading saved output for xi = 0.70000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.70000000.dat
+Loading saved output for xi = 0.71000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.71000000.dat
+Loading saved output for xi = 0.72000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.72000000.dat
+Loading saved output for xi = 0.73000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.73000000.dat
+Loading saved output for xi = 0.74000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.74000000.dat
+Loading saved output for xi = 0.75000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.75000000.dat
+Loading saved output for xi = 0.76000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.76000000.dat
+Loading saved output for xi = 0.77000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.77000000.dat
+Loading saved output for xi = 0.78000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.78000000.dat
+Loading saved output for xi = 0.79000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.79000000.dat
+Loading saved output for xi = 0.80000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.80000000.dat
+Loading saved output for xi = 0.81000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.81000000.dat
+Loading saved output for xi = 0.82000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.82000000.dat
+Loading saved output for xi = 0.83000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.83000000.dat
+Loading saved output for xi = 0.84000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.84000000.dat
+Loading saved output for xi = 0.85000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.85000000.dat
+Loading saved output for xi = 0.86000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.86000000.dat
+Loading saved output for xi = 0.87000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.87000000.dat
+Loading saved output for xi = 0.88000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.88000000.dat
+Loading saved output for xi = 0.89000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.89000000.dat
+Loading saved output for xi = 0.90000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.90000000.dat
+Loading saved output for xi = 0.91000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.91000000.dat
+Loading saved output for xi = 0.92000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.92000000.dat
+Loading saved output for xi = 0.93000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.93000000.dat
+Loading saved output for xi = 0.94000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.94000000.dat
+Loading saved output for xi = 0.95000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.95000000.dat
+Loading saved output for xi = 0.96000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.96000000.dat
+Loading saved output for xi = 0.97000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.97000000.dat
+Loading saved output for xi = 0.98000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.98000000.dat
+Loading saved output for xi = 0.99000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.99000000.dat
+Loading saved output for xi = 1.00000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_1.00000000.dat
+Loading saved output for xi = 1.01000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_1.01000000.dat
+Loading saved output for xi = 1.02000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_1.02000000.dat
+Loading saved output for xi = 1.03000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_1.03000000.dat
+Loading saved output for xi = 1.04000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_1.04000000.dat
+Loading saved output for xi = 1.05000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_1.05000000.dat
+Loading saved output for xi = 1.06000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_1.06000000.dat
+Loading saved output for xi = 1.07000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_1.07000000.dat
+Loading saved output for xi = 1.08000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_1.08000000.dat
+Loading saved output for xi = 1.09000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_1.09000000.dat
+Loading saved output for xi = 1.10000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_1.10000000.dat
+Loading saved output for xi = 1.11000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_1.11000000.dat
+Loading saved output for xi = 1.12000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_1.12000000.dat
+Loading saved output for xi = 1.13000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_1.13000000.dat
+Loading saved output for xi = 1.14000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_1.14000000.dat
+Loading saved output for xi = 1.15000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_1.15000000.dat
+Loading saved output for xi = 1.16000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_1.16000000.dat
+Loading saved output for xi = 1.17000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_1.17000000.dat
+Loading saved output for xi = 1.18000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_1.18000000.dat
+Loading saved output for xi = 1.19000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_1.19000000.dat
+
+
+RPMDrate execution terminated at Mon Apr 29 23:30:23 2024
+RPMDrate execution initiated at Mon Apr 29 23:30:40 2024
+
+###############################################################
+#                                                             #
+#                          ********                           #
+#                          RPMDrate                           #
+#                          ********                           #
+#                                                             #
+#   Version: 0.1.0 (15 Jun 2012)                              #
+#                                                             #
+#   Authors: Joshua W. Allen <jwallen@mit.edu>                #
+#            William H. Green <whgreen@mit.edu>               #
+#            Yury V. Suleimanov <ysuleyma@mit.edu>            #
+#                               <ysuleyma@princeton.edu>      #
+#                                                             #
+#   Website: http://github.com/GreenGroup/RPMDrate            #
+#                                                             #
+###############################################################
+
+Reading input file 'input.py'...
+
+****************************
+RPMD umbrella configurations
+****************************
+
+Parameters
+==========
+Temperature                             = 300 K
+Number of beads                         = 1
+Time step                               = 0.0001 ps
+Number of umbrella integration windows  = 133
+Trajectory evolution time               = 20 ps (200000 steps)
+
+Loading saved output from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/umbrella_configurations.dat
+Using results of previously saved umbrella configurations.
+
+**********************
+RPMD umbrella sampling
+**********************
+
+Parameters
+==========
+Temperature                             = 300 K
+Number of beads                         = 32
+Time step                               = 0.0005 ps
+Number of umbrella integration windows  = 130
+
+Loading saved output for xi = -0.10000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_-0.10000000.dat
+Loading saved output for xi = -0.09000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_-0.09000000.dat
+Loading saved output for xi = -0.08000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_-0.08000000.dat
+Loading saved output for xi = -0.07000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_-0.07000000.dat
+Loading saved output for xi = -0.06000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_-0.06000000.dat
+Loading saved output for xi = -0.05000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_-0.05000000.dat
+Loading saved output for xi = -0.04000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_-0.04000000.dat
+Loading saved output for xi = -0.03000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_-0.03000000.dat
+Loading saved output for xi = -0.02000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_-0.02000000.dat
+Loading saved output for xi = -0.01000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_-0.01000000.dat
+Loading saved output for xi = -0.00000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_-0.00000000.dat
+Loading saved output for xi = 0.01000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.01000000.dat
+Loading saved output for xi = 0.02000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.02000000.dat
+Loading saved output for xi = 0.03000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.03000000.dat
+Loading saved output for xi = 0.04000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.04000000.dat
+Loading saved output for xi = 0.05000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.05000000.dat
+Loading saved output for xi = 0.06000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.06000000.dat
+Loading saved output for xi = 0.07000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.07000000.dat
+Loading saved output for xi = 0.08000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.08000000.dat
+Loading saved output for xi = 0.09000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.09000000.dat
+Loading saved output for xi = 0.10000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.10000000.dat
+Loading saved output for xi = 0.11000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.11000000.dat
+Loading saved output for xi = 0.12000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.12000000.dat
+Loading saved output for xi = 0.13000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.13000000.dat
+Loading saved output for xi = 0.14000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.14000000.dat
+Loading saved output for xi = 0.15000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.15000000.dat
+Loading saved output for xi = 0.16000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.16000000.dat
+Loading saved output for xi = 0.17000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.17000000.dat
+Loading saved output for xi = 0.18000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.18000000.dat
+Loading saved output for xi = 0.19000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.19000000.dat
+Loading saved output for xi = 0.20000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.20000000.dat
+Loading saved output for xi = 0.21000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.21000000.dat
+Loading saved output for xi = 0.22000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.22000000.dat
+Loading saved output for xi = 0.23000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.23000000.dat
+Loading saved output for xi = 0.24000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.24000000.dat
+Loading saved output for xi = 0.25000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.25000000.dat
+Loading saved output for xi = 0.26000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.26000000.dat
+Loading saved output for xi = 0.27000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.27000000.dat
+Loading saved output for xi = 0.28000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.28000000.dat
+Loading saved output for xi = 0.29000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.29000000.dat
+Loading saved output for xi = 0.30000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.30000000.dat
+Loading saved output for xi = 0.31000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.31000000.dat
+Loading saved output for xi = 0.32000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.32000000.dat
+Loading saved output for xi = 0.33000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.33000000.dat
+Loading saved output for xi = 0.34000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.34000000.dat
+Loading saved output for xi = 0.35000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.35000000.dat
+Loading saved output for xi = 0.36000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.36000000.dat
+Loading saved output for xi = 0.37000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.37000000.dat
+Loading saved output for xi = 0.38000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.38000000.dat
+Loading saved output for xi = 0.39000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.39000000.dat
+Loading saved output for xi = 0.40000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.40000000.dat
+Loading saved output for xi = 0.41000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.41000000.dat
+Loading saved output for xi = 0.42000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.42000000.dat
+Loading saved output for xi = 0.43000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.43000000.dat
+Loading saved output for xi = 0.44000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.44000000.dat
+Loading saved output for xi = 0.45000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.45000000.dat
+Loading saved output for xi = 0.46000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.46000000.dat
+Loading saved output for xi = 0.47000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.47000000.dat
+Loading saved output for xi = 0.48000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.48000000.dat
+Loading saved output for xi = 0.49000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.49000000.dat
+Loading saved output for xi = 0.50000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.50000000.dat
+Loading saved output for xi = 0.51000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.51000000.dat
+Loading saved output for xi = 0.52000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.52000000.dat
+Loading saved output for xi = 0.53000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.53000000.dat
+Loading saved output for xi = 0.54000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.54000000.dat
+Loading saved output for xi = 0.55000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.55000000.dat
+Loading saved output for xi = 0.56000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.56000000.dat
+Loading saved output for xi = 0.57000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.57000000.dat
+Loading saved output for xi = 0.58000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.58000000.dat
+Loading saved output for xi = 0.59000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.59000000.dat
+Loading saved output for xi = 0.60000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.60000000.dat
+Loading saved output for xi = 0.61000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.61000000.dat
+Loading saved output for xi = 0.62000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.62000000.dat
+Loading saved output for xi = 0.63000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.63000000.dat
+Loading saved output for xi = 0.64000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.64000000.dat
+Loading saved output for xi = 0.65000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.65000000.dat
+Loading saved output for xi = 0.66000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.66000000.dat
+Loading saved output for xi = 0.67000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.67000000.dat
+Loading saved output for xi = 0.68000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.68000000.dat
+Loading saved output for xi = 0.69000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.69000000.dat
+Loading saved output for xi = 0.70000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.70000000.dat
+Loading saved output for xi = 0.71000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.71000000.dat
+Loading saved output for xi = 0.72000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.72000000.dat
+Loading saved output for xi = 0.73000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.73000000.dat
+Loading saved output for xi = 0.74000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.74000000.dat
+Loading saved output for xi = 0.75000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.75000000.dat
+Loading saved output for xi = 0.76000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.76000000.dat
+Loading saved output for xi = 0.77000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.77000000.dat
+Loading saved output for xi = 0.78000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.78000000.dat
+Loading saved output for xi = 0.79000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.79000000.dat
+Loading saved output for xi = 0.80000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.80000000.dat
+Loading saved output for xi = 0.81000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.81000000.dat
+Loading saved output for xi = 0.82000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.82000000.dat
+Loading saved output for xi = 0.83000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.83000000.dat
+Loading saved output for xi = 0.84000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.84000000.dat
+Loading saved output for xi = 0.85000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.85000000.dat
+Loading saved output for xi = 0.86000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.86000000.dat
+Loading saved output for xi = 0.87000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.87000000.dat
+Loading saved output for xi = 0.88000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.88000000.dat
+Loading saved output for xi = 0.89000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.89000000.dat
+Loading saved output for xi = 0.90000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.90000000.dat
+Loading saved output for xi = 0.91000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.91000000.dat
+Loading saved output for xi = 0.92000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.92000000.dat
+Loading saved output for xi = 0.93000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.93000000.dat
+Loading saved output for xi = 0.94000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.94000000.dat
+Loading saved output for xi = 0.95000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.95000000.dat
+Loading saved output for xi = 0.96000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.96000000.dat
+Loading saved output for xi = 0.97000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.97000000.dat
+Loading saved output for xi = 0.98000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.98000000.dat
+Loading saved output for xi = 0.99000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.99000000.dat
+Loading saved output for xi = 1.00000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_1.00000000.dat
+Loading saved output for xi = 1.01000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_1.01000000.dat
+Loading saved output for xi = 1.02000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_1.02000000.dat
+Loading saved output for xi = 1.03000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_1.03000000.dat
+Loading saved output for xi = 1.04000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_1.04000000.dat
+Loading saved output for xi = 1.05000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_1.05000000.dat
+Loading saved output for xi = 1.06000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_1.06000000.dat
+Loading saved output for xi = 1.07000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_1.07000000.dat
+Loading saved output for xi = 1.08000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_1.08000000.dat
+Loading saved output for xi = 1.09000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_1.09000000.dat
+Loading saved output for xi = 1.10000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_1.10000000.dat
+Loading saved output for xi = 1.11000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_1.11000000.dat
+Loading saved output for xi = 1.12000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_1.12000000.dat
+Loading saved output for xi = 1.13000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_1.13000000.dat
+Loading saved output for xi = 1.14000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_1.14000000.dat
+Loading saved output for xi = 1.15000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_1.15000000.dat
+Loading saved output for xi = 1.16000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_1.16000000.dat
+Loading saved output for xi = 1.17000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_1.17000000.dat
+Loading saved output for xi = 1.18000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_1.18000000.dat
+Loading saved output for xi = 1.19000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_1.19000000.dat
+
+
+RPMDrate execution terminated at Mon Apr 29 23:33:28 2024
+RPMDrate execution initiated at Mon Apr 29 23:33:42 2024
+
+###############################################################
+#                                                             #
+#                          ********                           #
+#                          RPMDrate                           #
+#                          ********                           #
+#                                                             #
+#   Version: 0.1.0 (15 Jun 2012)                              #
+#                                                             #
+#   Authors: Joshua W. Allen <jwallen@mit.edu>                #
+#            William H. Green <whgreen@mit.edu>               #
+#            Yury V. Suleimanov <ysuleyma@mit.edu>            #
+#                               <ysuleyma@princeton.edu>      #
+#                                                             #
+#   Website: http://github.com/GreenGroup/RPMDrate            #
+#                                                             #
+###############################################################
+
+Reading input file 'input.py'...
+
+****************************
+RPMD umbrella configurations
+****************************
+
+Parameters
+==========
+Temperature                             = 300 K
+Number of beads                         = 1
+Time step                               = 0.0001 ps
+Number of umbrella integration windows  = 133
+Trajectory evolution time               = 20 ps (200000 steps)
+
+Loading saved output from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/umbrella_configurations.dat
+Using results of previously saved umbrella configurations.
+
+**********************
+RPMD umbrella sampling
+**********************
+
+Parameters
+==========
+Temperature                             = 300 K
+Number of beads                         = 32
+Time step                               = 0.0005 ps
+Number of umbrella integration windows  = 130
+
+Loading saved output for xi = -0.10000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_-0.10000000.dat
+Loading saved output for xi = -0.09000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_-0.09000000.dat
+Loading saved output for xi = -0.08000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_-0.08000000.dat
+Loading saved output for xi = -0.07000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_-0.07000000.dat
+Loading saved output for xi = -0.06000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_-0.06000000.dat
+Loading saved output for xi = -0.05000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_-0.05000000.dat
+Loading saved output for xi = -0.04000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_-0.04000000.dat
+Loading saved output for xi = -0.03000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_-0.03000000.dat
+Loading saved output for xi = -0.02000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_-0.02000000.dat
+Loading saved output for xi = -0.01000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_-0.01000000.dat
+Loading saved output for xi = -0.00000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_-0.00000000.dat
+Loading saved output for xi = 0.01000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.01000000.dat
+Loading saved output for xi = 0.02000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.02000000.dat
+Loading saved output for xi = 0.03000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.03000000.dat
+Loading saved output for xi = 0.04000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.04000000.dat
+Loading saved output for xi = 0.05000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.05000000.dat
+Loading saved output for xi = 0.06000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.06000000.dat
+Loading saved output for xi = 0.07000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.07000000.dat
+Loading saved output for xi = 0.08000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.08000000.dat
+Loading saved output for xi = 0.09000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.09000000.dat
+Loading saved output for xi = 0.10000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.10000000.dat
+Loading saved output for xi = 0.11000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.11000000.dat
+Loading saved output for xi = 0.12000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.12000000.dat
+Loading saved output for xi = 0.13000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.13000000.dat
+Loading saved output for xi = 0.14000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.14000000.dat
+Loading saved output for xi = 0.15000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.15000000.dat
+Loading saved output for xi = 0.16000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.16000000.dat
+Loading saved output for xi = 0.17000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.17000000.dat
+Loading saved output for xi = 0.18000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.18000000.dat
+Loading saved output for xi = 0.19000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.19000000.dat
+Loading saved output for xi = 0.20000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.20000000.dat
+Loading saved output for xi = 0.21000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.21000000.dat
+Loading saved output for xi = 0.22000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.22000000.dat
+Loading saved output for xi = 0.23000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.23000000.dat
+Loading saved output for xi = 0.24000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.24000000.dat
+Loading saved output for xi = 0.25000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.25000000.dat
+Loading saved output for xi = 0.26000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.26000000.dat
+Loading saved output for xi = 0.27000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.27000000.dat
+Loading saved output for xi = 0.28000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.28000000.dat
+Loading saved output for xi = 0.29000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.29000000.dat
+Loading saved output for xi = 0.30000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.30000000.dat
+Loading saved output for xi = 0.31000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.31000000.dat
+Loading saved output for xi = 0.32000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.32000000.dat
+Loading saved output for xi = 0.33000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.33000000.dat
+Loading saved output for xi = 0.34000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.34000000.dat
+Loading saved output for xi = 0.35000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.35000000.dat
+Loading saved output for xi = 0.36000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.36000000.dat
+Loading saved output for xi = 0.37000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.37000000.dat
+Loading saved output for xi = 0.38000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.38000000.dat
+Loading saved output for xi = 0.39000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.39000000.dat
+Loading saved output for xi = 0.40000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.40000000.dat
+Loading saved output for xi = 0.41000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.41000000.dat
+Loading saved output for xi = 0.42000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.42000000.dat
+Loading saved output for xi = 0.43000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.43000000.dat
+Loading saved output for xi = 0.44000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.44000000.dat
+Loading saved output for xi = 0.45000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.45000000.dat
+Loading saved output for xi = 0.46000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.46000000.dat
+Loading saved output for xi = 0.47000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.47000000.dat
+Loading saved output for xi = 0.48000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.48000000.dat
+Loading saved output for xi = 0.49000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.49000000.dat
+Loading saved output for xi = 0.50000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.50000000.dat
+Loading saved output for xi = 0.51000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.51000000.dat
+Loading saved output for xi = 0.52000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.52000000.dat
+Loading saved output for xi = 0.53000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.53000000.dat
+Loading saved output for xi = 0.54000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.54000000.dat
+Loading saved output for xi = 0.55000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.55000000.dat
+Loading saved output for xi = 0.56000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.56000000.dat
+Loading saved output for xi = 0.57000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.57000000.dat
+Loading saved output for xi = 0.58000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.58000000.dat
+Loading saved output for xi = 0.59000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.59000000.dat
+Loading saved output for xi = 0.60000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.60000000.dat
+Loading saved output for xi = 0.61000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.61000000.dat
+Loading saved output for xi = 0.62000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.62000000.dat
+Loading saved output for xi = 0.63000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.63000000.dat
+Loading saved output for xi = 0.64000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.64000000.dat
+Loading saved output for xi = 0.65000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.65000000.dat
+Loading saved output for xi = 0.66000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.66000000.dat
+Loading saved output for xi = 0.67000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.67000000.dat
+Loading saved output for xi = 0.68000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.68000000.dat
+Loading saved output for xi = 0.69000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.69000000.dat
+Loading saved output for xi = 0.70000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.70000000.dat
+Loading saved output for xi = 0.71000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.71000000.dat
+Loading saved output for xi = 0.72000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.72000000.dat
+Loading saved output for xi = 0.73000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.73000000.dat
+Loading saved output for xi = 0.74000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.74000000.dat
+Loading saved output for xi = 0.75000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.75000000.dat
+Loading saved output for xi = 0.76000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.76000000.dat
+Loading saved output for xi = 0.77000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.77000000.dat
+Loading saved output for xi = 0.78000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.78000000.dat
+Loading saved output for xi = 0.79000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.79000000.dat
+Loading saved output for xi = 0.80000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.80000000.dat
+Loading saved output for xi = 0.81000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.81000000.dat
+Loading saved output for xi = 0.82000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.82000000.dat
+Loading saved output for xi = 0.83000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.83000000.dat
+Loading saved output for xi = 0.84000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.84000000.dat
+Loading saved output for xi = 0.85000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.85000000.dat
+Loading saved output for xi = 0.86000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.86000000.dat
+Loading saved output for xi = 0.87000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.87000000.dat
+Loading saved output for xi = 0.88000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.88000000.dat
+Loading saved output for xi = 0.89000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.89000000.dat
+Loading saved output for xi = 0.90000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.90000000.dat
+Loading saved output for xi = 0.91000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.91000000.dat
+Loading saved output for xi = 0.92000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.92000000.dat
+Loading saved output for xi = 0.93000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.93000000.dat
+Loading saved output for xi = 0.94000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.94000000.dat
+Loading saved output for xi = 0.95000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.95000000.dat
+Loading saved output for xi = 0.96000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.96000000.dat
+Loading saved output for xi = 0.97000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.97000000.dat
+Loading saved output for xi = 0.98000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.98000000.dat
+Loading saved output for xi = 0.99000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_0.99000000.dat
+Loading saved output for xi = 1.00000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_1.00000000.dat
+Loading saved output for xi = 1.01000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_1.01000000.dat
+Loading saved output for xi = 1.02000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_1.02000000.dat
+Loading saved output for xi = 1.03000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_1.03000000.dat
+Loading saved output for xi = 1.04000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_1.04000000.dat
+Loading saved output for xi = 1.05000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_1.05000000.dat
+Loading saved output for xi = 1.06000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_1.06000000.dat
+Loading saved output for xi = 1.07000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_1.07000000.dat
+Loading saved output for xi = 1.08000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_1.08000000.dat
+Loading saved output for xi = 1.09000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_1.09000000.dat
+Loading saved output for xi = 1.10000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_1.10000000.dat
+Loading saved output for xi = 1.11000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_1.11000000.dat
+Loading saved output for xi = 1.12000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_1.12000000.dat
+Loading saved output for xi = 1.13000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_1.13000000.dat
+Loading saved output for xi = 1.14000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_1.14000000.dat
+Loading saved output for xi = 1.15000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_1.15000000.dat
+Loading saved output for xi = 1.16000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_1.16000000.dat
+Loading saved output for xi = 1.17000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_1.17000000.dat
+Loading saved output for xi = 1.18000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_1.18000000.dat
+Loading saved output for xi = 1.19000000 from /home/cyh/ABF/Cayley-RPMD_DFT/H+H2/300/32/umbrella_sampling_1.19000000.dat
+
+
+RPMDrate execution terminated at Mon Apr 29 23:37:22 2024

@@ -1855,7 +1855,7 @@ class RPMD:
             q_child = numpy.load(os.path.join(os.path.join(workingDirectory, 'umbrella_sampling_{0:.8f}_q.npy'.format(child))))
             p_child = self.sampleMomentum()
             # print(saveChildTrajectory)
-            args = (self, p_child, q_child,1000)
+            args = (self, p_child, q_child,5000)
             if pool:
                 results.append(pool.apply_async(runABF, args))
             else:
@@ -1871,15 +1871,15 @@ class RPMD:
             # Update the numerator and denominator of the recrossing factor expression
             # xilist.append(xi_list1)
             qlist.append(q1)
-        for j in range(3):
+        for j in range(2):
             results=[]
             xilist=[]
-            for a in range(10):
+            for a in range(15):
                 for child in qlist:
                     q_child = child
                     p_child = self.sampleMomentum()
                     # print(saveChildTrajectory)
-                    args = (self, p_child, q_child,500)
+                    args = (self, p_child, q_child,2000)
                     if pool:
                         results.append(pool.apply_async(runABF, args))
                     else:
@@ -1898,7 +1898,7 @@ class RPMD:
                     q_child = child
                     p_child = self.sampleMomentum()
                     # print(saveChildTrajectory)
-                    args = (self, p_child, q_child,100000)
+                    args = (self, p_child, q_child,20000)
                     if pool:
                         results.append(pool.apply_async(runABF, args))
                     else:
