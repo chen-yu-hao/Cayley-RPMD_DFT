@@ -28,6 +28,7 @@
 #   DEALINGS IN THE SOFTWARE. 
 #
 ################################################################################
+import matplotlib.pyplot as plt
 
 import os
 import os.path
@@ -113,7 +114,7 @@ def runABF(rpmd, p, q, equilibrationSteps):
     Run an individual umbrella integration trajectory, returning the sum of the
     first and second moments of the reaction coordinate at each time step.
     """
-    system.initialize_mlabf()
+    
     rpmd.activate()
     steps = 0
     # p=numpy.load("p.npy")
@@ -1822,15 +1823,14 @@ class RPMD:
     def ABF_fit():
         pass
 
-    def ABF(self,dt,evolutionTime):
-        import matplotlib.pyplot as plt
-        # self.ABF_fit_init()
-        
-
+    def ABF_calculation(self,dt,equilibrateTime,evolutionTime,num_loop):
         dt = float(quantity.convertTime(dt, "ps")) / constants.au2ps
         self.dt = dt
         evolutionTime = float(quantity.convertTime(evolutionTime, "ps")) / constants.au2ps
-        equilibrationSteps = int(evolutionTime/dt)
+        equilibrateTime = float(quantity.convertTime(equilibrateTime, "ps")) / constants.au2ps
+        sampling_steps = int(evolutionTime/dt)
+        equilibrate_steps = int(evolutionTime/dt)
+
         workingDirectory = self.createWorkingDirectory()
 
         xilist=[]
@@ -1850,36 +1850,44 @@ class RPMD:
             if processes > 1:
                 raise ValueError('The "multiprocessing" package was not found in this Python installation; you must install this package or set processes to 1.')
             pool = None
-        window_xilist=numpy.arange(0.0, 1.0, 0.01)
-        for child in window_xilist:
-            q_child = numpy.load(os.path.join(os.path.join(workingDirectory, 'umbrella_sampling_{0:.8f}_q.npy'.format(child))))
-            p_child = self.sampleMomentum()
-            # print(saveChildTrajectory)
-            args = (self, p_child, q_child,5000)
-            if pool:
-                results.append(pool.apply_async(runABF, args))
-            else:
-                results.append(runABF(*args))           
-            # childCount += 2
-            # cor+=1
-        for i in range(len(window_xilist)):
-            # This line will block until the child trajectory finishes
-            if pool:
-                xi_list1, p1, q1= results[i].get()
-            else:
-                xi_list1, p1, q1 = results[i]
-            # Update the numerator and denominator of the recrossing factor expression
-            # xilist.append(xi_list1)
-            qlist.append(q1)
-        for j in range(2):
-            results=[]
+        window_xilist=numpy.arange(0.0, 1.0, 0.05)
+        try :
+            qlist=numpy.load(os.path.join(workingDirectory, 'q_ABF_sampling.npy'))
+            # for i in qlist:
+            #     # print(i.shape)
+            print("Successfully load position from checkpoint")
+        except:
+            print("Equilibrate positions from umbrella trajectories")
+            for child in window_xilist:
+                q_child = numpy.load(os.path.join(os.path.join(workingDirectory, 'umbrella_sampling_{0:.8f}_q.npy'.format(child))))
+                p_child = self.sampleMomentum()
+                # print(saveChildTrajectory)
+                args = (self, p_child, q_child,equilibrate_steps)
+                if pool:
+                    results.append(pool.apply_async(runABF, args))
+                else:
+                    results.append(runABF(*args))           
+                # childCount += 2
+                # cor+=1
+            for i in range(len(window_xilist)):
+                # This line will block until the child trajectory finishes
+                if pool:
+                    xi_list1, p1, q1= results[i].get()
+                else:
+                    xi_list1, p1, q1 = results[i]
+                # Update the numerator and denominator of the recrossing factor expression
+                # xilist.append(xi_list1)
+                qlist.append(q1)
+        for j in range(num_loop[0]):
             xilist=[]
-            for a in range(15):
+            for a in range(num_loop[1]):
+                print(f"Equilibrate {j}.{a} trajectories for {equilibrate_steps} steps")
+                results=[]
+
                 for child in qlist:
                     q_child = child
                     p_child = self.sampleMomentum()
-                    # print(saveChildTrajectory)
-                    args = (self, p_child, q_child,2000)
+                    args = (self, p_child, q_child,equilibrate_steps)
                     if pool:
                         results.append(pool.apply_async(runABF, args))
                     else:
@@ -1894,17 +1902,20 @@ class RPMD:
                     # Update the numerator and denominator of the recrossing factor expression
                     # xilist.append(xi_list1)
                     qlist.append(q1) 
+
+                results=[]
+                print(f"Sampling {j}.{a} trajectories for {sampling_steps} steps")
                 for child in qlist:
                     q_child = child
                     p_child = self.sampleMomentum()
                     # print(saveChildTrajectory)
-                    args = (self, p_child, q_child,20000)
+                    args = (self, p_child, q_child,sampling_steps)
                     if pool:
                         results.append(pool.apply_async(runABF, args))
                     else:
                         results.append(runABF(*args))  
                 qlist=[]
-                for i in range(len(window_xilist)):
+                for i in range(len(results)):
                     # This line will block until the child trajectory finishes
                     if pool:
                         xi_list1, p1, q1= results[i].get()
@@ -1918,13 +1929,26 @@ class RPMD:
             counts,bins,q =plt.hist(xilist,bins=500)
             bins=(bins[:-1]+bins[1:])/2
             plt.cla()
-            plotlist.append([bins,counts])
+            plotlist.append([bins,counts/(bins[1]-bins[0])/len(xilist)])
         
 
 
         
 
         for bins,counts in plotlist:
-            plt.scatter(bins,counts/len(xilist),alpha=0.4)
+            plt.scatter(bins,counts,alpha=0.4)
         plt.show()
+        plotlist=numpy.array(plotlist)
+        numpy.save(os.path.join(workingDirectory, 'ABF_sampling.npy'),plotlist)
+        qlist=numpy.array(qlist)
+        numpy.save(os.path.join(workingDirectory, 'q_ABF_sampling.npy'),qlist)
+        return plotlist
+    def ABF(self,dt,evolutionTime):
+        
+        # self.ABF_fit_init()
+        system.initialize_mlabf()
+        results=self.ABF_calculation(dt,(3,"ps"),(5,"ps"),(5,15))
+        
+
+        
 
